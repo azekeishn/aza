@@ -42,7 +42,7 @@ def check_report_logic(report_text):
     except Exception as e:
         # Ошибка, если парсинг не удался (например, нет нужных строк)
         print(f"Ошибка парсинга: {e}")
-        return "⚠️ **Ошибка парсинга.** Не удалось найти все необходимые числовые поля в отчете. Проверьте форматирование."
+        return "⚠️ **Ошибка парсинга.**"
 
 
     if total_actual is None:
@@ -90,5 +90,6 @@ def handle_text(message):
 # Запуск бота
 print("Бот запущен...")
 bot.polling(none_stop=True)
+
 
 
