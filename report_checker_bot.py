@@ -1,5 +1,6 @@
 import telebot
 import re
+import os
 
 # ЗАМЕНИТЕ НА ВАШ ТОКЕН БОТА
 TOKEN = os.environ.get("8478772342:AAFrpKocZDAGJV6W5z6kq0rEKov1tgG7wL4") 
@@ -89,4 +90,5 @@ def handle_text(message):
 # Запуск бота
 print("Бот запущен...")
 bot.polling(none_stop=True)
+
 
