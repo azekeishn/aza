@@ -2,7 +2,11 @@ import telebot
 import re
 
 # ЗАМЕНИТЕ НА ВАШ ТОКЕН БОТА
-TOKEN = "8478772342:AAFrpKocZDAGJV6W5z6kq0rEKov1tgG7wL4"
+TOKEN = os.environ.get("8478772342:AAFrpKocZDAGJV6W5z6kq0rEKov1tgG7wL4") 
+if not TOKEN:
+    print("Ошибка: Токен бота не найден в переменной окружения BOT_TOKEN.")
+    exit()
+
 bot = telebot.TeleBot(TOKEN)
 
 # --- ФУНКЦИЯ ДЛЯ ПРОВЕРКИ ОТЧЕТА ---
@@ -85,3 +89,4 @@ def handle_text(message):
 # Запуск бота
 print("Бот запущен...")
 bot.polling(none_stop=True)
+
